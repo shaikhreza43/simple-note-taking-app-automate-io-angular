@@ -1,0 +1,22 @@
+ul {
+  list-style: none;
+}
+
+div.sidenavbar {
+  background-color: burlywood;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sidenavbar a {
+  text-decoration: none;
+  color: black;
+  white-space: normal;
+  border: 1px solid #3ca541;
+  padding: 10px 218px;
+  border-radius: 4px;
+text-align: left !important;
+}
+
