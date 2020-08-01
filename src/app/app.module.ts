@@ -1,3 +1,4 @@
+import { OperationService } from './operation.service';
 import { GlobalService } from './global.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -7,21 +8,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SideNotesBarComponent } from './sidenotesbar/sidenotesbar.component';
 import { NoteContainerComponent } from './note-container/note-container.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideNotesBarComponent,
-    NoteContainerComponent
+    NoteContainerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  providers: [GlobalService],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [GlobalService,OperationService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
