@@ -2,8 +2,8 @@
     <h5>Notes</h5>
     <ng-container *ngFor="let item of this.global.notes">
         <div (click)="this.operation.selectNote(item)">
-            <label>{{item.title}}</label>
-            <label>{{item.content}}</label>
+            <span class="note-title">{{item.title}}</span><br>
+            <span class="note-content">{{item.content}}</span>
         </div>
        
     </ng-container>
