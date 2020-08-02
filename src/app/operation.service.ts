@@ -1,3 +1,4 @@
+import { Notes } from './model/notes.model';
 import { GlobalService } from './global.service';
 import { Injectable } from '@angular/core';
 
@@ -26,7 +27,14 @@ export class OperationService {
     this.global.notes = arr;
   };
 
-  add = (obj) => {
-    this.global.notes.push(obj);
+  add = (e) => {
+  //   e.preventDefault();
+  //  Object.assign({...this.global.notes},{[e.target.name]:e.target.value});
+  this.global.notes.push({id:45,title:'Some Dummy Title',content:"Some Dummy Content"});
+    console.log(this.global.notes);
   };
+
+  handleChange = (e)=>{
+    Object.assign({...this.global.notes},{[e.target.name]:e.target.value});
+  }
 }

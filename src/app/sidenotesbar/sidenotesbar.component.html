@@ -1,7 +1,7 @@
 <div class="sidenavbar">
     <h5>Notes</h5>
     <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-success"
-        data-toggle="modal" data-target="#exampleModal" (click)="this.operation.add({id:88,title:'jhdjhjd',content:'kjdkhkhdkhdkd'})">Add</button>
+        data-toggle="modal" data-target="#exampleModal">Add</button>
     <input type="search" class="form-control mt-2 mb-2 bg-light" placeholder="Search Notes" name="searchNotes"
         id="search">
     <ng-container *ngFor="let item of this.global.notes">
@@ -31,12 +31,16 @@
                 </button>
             </div>
             <div class="modal-body">
-              
-                
+                <label for="id">Id</label>
+                <input type="text" name="id" id="id" class="form-control" (change)="this.operation.handleChange($event)">
+                <label for="title">Title</label>
+              <input type="text" name="title" id="title" class="form-control" (change)="this.operation.handleChange($event)">
+              <label for="content">Content</label>
+              <input type="text" name="content" id="content" class="form-control" (change)="this.operation.handleChange($event)">
+                <button type="button" class="btn btn-success mt-2" (click)="this.operation.add($event)">Add Note</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
