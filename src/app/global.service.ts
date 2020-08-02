@@ -20,37 +20,37 @@ export class GlobalService {
       id: 4,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     },
     {
       id: 5,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     },
     {
       id: 6,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     },
     {
       id: 7,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     },
     {
       id: 8,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     },
     {
       id: 9,
       title: 'User Interafce',
       content:
-        'Raect is most popular javascript library for building user interfaces',
+        'React is most popular javascript library for building user interfaces',
     }
   ];
 

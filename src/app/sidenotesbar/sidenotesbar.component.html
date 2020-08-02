@@ -1,10 +1,10 @@
 <div class="sidenavbar">
     <h5>Notes</h5>
     <ng-container *ngFor="let item of this.global.notes">
-        <div (click)="this.operation.selectNote(item)">
-            <span class="note-title">{{item.title}}</span><br>
-            <span class="note-content">{{item.content}}</span>
-        </div>
+        <ul (click)="this.operation.selectNote(item)">
+            <li class="note-title">{{item.title}}</li><br>
+            <li class="note-content">{{item.content}}</li>
+        </ul>
        
     </ng-container>
 </div>

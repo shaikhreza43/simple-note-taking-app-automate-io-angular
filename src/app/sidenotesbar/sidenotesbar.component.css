@@ -1,5 +1,12 @@
 ul {
   list-style: none;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  box-shadow: 2px 3px #eee;
+  overflow-x: hidden;
+}
+li{
+  overflow-wrap: break-word;
 }
 
 div.sidenavbar {
@@ -24,9 +31,9 @@ div.sidenavbar {
   font-weight: bold;
 }
 
-.note-content{
+/* .note-content{
   width: 300px;
   border: 2px solid #111111;
   padding: 5px;
-}
+} */
 
