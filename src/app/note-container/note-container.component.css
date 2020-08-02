@@ -1,7 +1,9 @@
 textarea {
     width: 100%;
     height: auto;
+    min-height: 200px;
     position: absolute;
     right: 16px;
+    overflow: hidden;
   }
  

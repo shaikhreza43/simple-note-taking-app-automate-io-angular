@@ -1,10 +1,43 @@
 <div class="sidenavbar">
     <h5>Notes</h5>
+    <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-success"
+        data-toggle="modal" data-target="#exampleModal" (click)="this.operation.add({id:88,title:'jhdjhjd',content:'kjdkhkhdkhdkd'})">Add</button>
+    <input type="search" class="form-control mt-2 mb-2 bg-light" placeholder="Search Notes" name="searchNotes"
+        id="search">
     <ng-container *ngFor="let item of this.global.notes">
-        <ul (click)="this.operation.selectNote(item)">
-            <li class="note-title">{{item.title}}</li><br>
-            <li class="note-content">{{item.content}}</li>
+        <ul id="myList">
+            <div style="display: flex;">
+                <li class="note-title" (click)="this.operation.selectNote(item)">{{item.title}}</li>
+                <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-danger"
+                    (click)="this.operation.delete(item)">Delete</button>
+            </div>
+            <br>
+            <li class="note-content" (click)="this.operation.selectNote(item)">{{item.content}}</li>
+
         </ul>
-       
+
     </ng-container>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add a New Note</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>

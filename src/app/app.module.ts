@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     SideNotesBarComponent,
-    NoteContainerComponent,
+    NoteContainerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [GlobalService,OperationService],

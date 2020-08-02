@@ -19,4 +19,14 @@ export class OperationService {
 
     this.global.notes[index].content = this.global.selectedNote;
   };
+
+  delete = (item) => {
+    const arr = this.global.notes.filter((item) => item === item);
+    arr.splice(0, 1);
+    this.global.notes = arr;
+  };
+
+  add = (obj) => {
+    this.global.notes.push(obj);
+  };
 }
