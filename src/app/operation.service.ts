@@ -31,9 +31,9 @@ export class OperationService {
     this.global.notes = arr;
   };
 
-  add = (e) => {
+  add = () => {
     var obj = {
-      id: Number(this.global.addNotes.id),
+      id: Number(this.global.notes.length+1),
       title: this.global.addNotes.title,
       content: this.global.addNotes.content,
     };
