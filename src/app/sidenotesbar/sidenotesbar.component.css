@@ -5,7 +5,7 @@ ul {
   box-shadow: 2px 3px #eee;
   overflow-x: hidden;
 }
-li{
+li {
   overflow-wrap: break-word;
 }
 
@@ -27,56 +27,68 @@ div.sidenavbar {
   text-align: left !important;
 }
 
-.note-title{
+.note-title {
   font-weight: bold;
 }
 
-button.addbtn{
+button.addbtn {
   position: absolute;
   left: 450px;
 }
 
-button.delbtn{
-position: absolute;
-left: 450px;
-margin-top: 10px;
-}
-
-@media screen and (max-width:700px){
-  button.addbtn{
-    position: absolute;
-    left: 230px;
-  }
-
-  button.delbtn{
+button.delbtn {
   position: absolute;
-  left: 230px;
+  left: 450px;
   margin-top: 10px;
-  }
 }
-@media(width:1100px){
-  button.addbtn{
+@media only screen and (min-width: 200px) and (max-width: 450px) {
+  button.addbtn {
     position: absolute;
-    left: 350px;
+    left: 130px;
   }
 
-  button.delbtn{
-  position: absolute;
-  left: 350px;
-  margin-top: 10px;
+  button.delbtn {
+    position: absolute;
+    left: 130px;
+    margin-top: 10px;
   }
 }
 
-@media(min-width:1400px){
-  button.addbtn{
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  button.addbtn {
+    position: absolute;
+    left: 430px;
+  }
+
+  button.delbtn {
+    position: absolute;
+    left: 430px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+  button.addbtn {
+    position: absolute;
+    left: 320px;
+  }
+
+  button.delbtn {
+    position: absolute;
+    left: 320px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1400px) {
+  button.addbtn {
     position: absolute;
     left: 480px;
   }
 
-  button.delbtn{
-  position: absolute;
-  left: 480px;
-  margin-top: 10px;
+  button.delbtn {
+    position: absolute;
+    left: 480px;
+    margin-top: 10px;
   }
 }
 
@@ -85,4 +97,3 @@ margin-top: 10px;
   border: 2px solid #111111;
   padding: 5px;
 } */
-
