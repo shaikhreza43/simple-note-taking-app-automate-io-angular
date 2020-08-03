@@ -1,7 +1,6 @@
 import { OperationService } from './../operation.service';
 import { GlobalService } from './../global.service';
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-sidenotesbar',
