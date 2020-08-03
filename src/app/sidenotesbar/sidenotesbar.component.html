@@ -1,6 +1,6 @@
 <div class="sidenavbar">
     <h5>Notes</h5>
-    <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-success"
+    <button type="button" class="btn btn-sm btn-outline-success addbtn"
         data-toggle="modal" data-target="#exampleModal">Add</button>
     <input type="search" class="form-control mt-2 mb-2 bg-light" placeholder="Search Notes" name="searchNotes"
         id="search" [(ngModel)]="searchValue" (keyup)="search()">
@@ -8,7 +8,7 @@
         <ul id="myList">
             <div style="display: flex;">
                 <li class="note-title" (click)="this.operation.selectNote(item)">{{item.title}}</li>
-                <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-danger"
+                <button type="button" class="btn btn-sm btn-outline-danger delbtn"
                     (click)="this.operation.delete(item)">Delete</button>
             </div>
             <br>
