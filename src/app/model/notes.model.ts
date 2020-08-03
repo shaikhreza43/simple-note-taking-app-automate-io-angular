@@ -1,5 +1,5 @@
-export class Notes{
-    id:Number;
-    title:String;
-    content:String;
+export class Notes {
+  id: Number;
+  title: String;
+  content: String;
 }

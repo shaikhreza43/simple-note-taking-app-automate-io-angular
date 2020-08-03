@@ -22,19 +22,29 @@ export class OperationService {
   };
 
   delete = (item) => {
+    let index = this.global.notes.findIndex((note) => {
+      return note.id === item.id;
+    });
+
     const arr = this.global.notes.filter((item) => item === item);
-    arr.splice(0, 1);
+    arr.splice(index, 1);
     this.global.notes = arr;
   };
 
   add = (e) => {
-  //   e.preventDefault();
-  //  Object.assign({...this.global.notes},{[e.target.name]:e.target.value});
-  this.global.notes.push({id:45,title:'Some Dummy Title',content:"Some Dummy Content"});
+    var obj = {
+      id: Number(this.global.addNotes.id),
+      title: this.global.addNotes.title,
+      content: this.global.addNotes.content,
+    };
+    this.global.notes.push(obj);
+    this.global.addNotes = {
+      id: '',
+      title: '',
+      content: '',
+    };
+    document.getElementById('close').click();
     console.log(this.global.notes);
   };
 
-  handleChange = (e)=>{
-    Object.assign({...this.global.notes},{[e.target.name]:e.target.value});
-  }
 }

@@ -57,5 +57,10 @@ export class GlobalService {
   public noteId: number;
   public openModal:boolean=true;
 
+   public addNotes={
+    id:'',
+    title:'',
+    content:''
+}
   constructor() {}
 }

@@ -3,7 +3,7 @@
     <button type="button" style="position: absolute;left: 470px;" class="btn btn-sm btn-outline-success"
         data-toggle="modal" data-target="#exampleModal">Add</button>
     <input type="search" class="form-control mt-2 mb-2 bg-light" placeholder="Search Notes" name="searchNotes"
-        id="search">
+        id="search" [(ngModel)]="searchValue" (keyup)="search()">
     <ng-container *ngFor="let item of this.global.notes">
         <ul id="myList">
             <div style="display: flex;">
@@ -32,15 +32,17 @@
             </div>
             <div class="modal-body">
                 <label for="id">Id</label>
-                <input type="text" name="id" id="id" class="form-control" (change)="this.operation.handleChange($event)">
+                <input type="text" name="id" id="id" class="form-control" [(ngModel)]="this.global.addNotes.id">
                 <label for="title">Title</label>
-              <input type="text" name="title" id="title" class="form-control" (change)="this.operation.handleChange($event)">
-              <label for="content">Content</label>
-              <input type="text" name="content" id="content" class="form-control" (change)="this.operation.handleChange($event)">
-                <button type="button" class="btn btn-success mt-2" (click)="this.operation.add($event)">Add Note</button>
+                <input type="text" name="title" id="title" class="form-control"
+                    [(ngModel)]="this.global.addNotes.title">
+                <label for="content">Content</label>
+                <input type="text" name="content" id="content" class="form-control"
+                    [(ngModel)]="this.global.addNotes.content">
+                <button type="button" class="btn btn-success mt-2" (click)="this.operation.add()">Add Note</button>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close">Close</button>
             </div>
         </div>
     </div>
