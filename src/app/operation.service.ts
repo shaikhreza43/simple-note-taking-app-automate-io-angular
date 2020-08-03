@@ -33,18 +33,26 @@ export class OperationService {
 
   add = () => {
     var obj = {
-      id: Number(this.global.notes.length+1),
+      id: Number(this.global.addNotes.id),
       title: this.global.addNotes.title,
       content: this.global.addNotes.content,
     };
+    if (obj.title === undefined || obj.title === null || obj.title === '') {
+      return;
+    } else if (
+      obj.content === undefined ||
+      obj.content === null ||
+      obj.content === ''
+    ) {
+      return;
+    }
     this.global.notes.push(obj);
     this.global.addNotes = {
       id: '',
       title: '',
       content: '',
     };
-    document.getElementById('close').click();
     console.log(this.global.notes);
+    document.getElementById('close').click();
   };
-
 }

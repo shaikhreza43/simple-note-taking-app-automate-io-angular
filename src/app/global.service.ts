@@ -57,8 +57,8 @@ export class GlobalService {
   public noteId: number;
   public openModal:boolean=true;
 
-   public addNotes={
-    id:'',
+   public addNotes:any={
+    id:this.notes.length+1,
     title:'',
     content:''
 }
